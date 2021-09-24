@@ -75,10 +75,19 @@ export default function _index() {
       '0x3302F0674f316584092C15B865b9e5C8f10751D2'
     );
     const price = 0.1 * 10 ** 18 * amount;
-    // const gasAmount = await wolfContract.methods
-    //   .mint(amount)
-    //   .estimateGas({from: address, value: price});
-
+    /*
+    let options = {
+      from: connectedAddress,
+      price: price;
+    }
+    const gasEstimate = await wolfContract.methods
+       .mint(amount)
+       .estimateGas(options);
+    options = {
+       ...options,
+       gas: parseInt(1.2 * gasEstimate)
+    }
+*/
     console.log({from: address, value: price});
 
     wolfContract.methods
