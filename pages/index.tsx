@@ -155,20 +155,7 @@ export default function _index() {
   }, [state.address]);
   return (
     <div className={`home h-100`}>
-      <Head>
-        <script
-          // language='javascript'
-          type='text/javascript'
-          src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-        <script
-          // language='javascript'
-          type='text/javascript'
-          src='web3.min.js'></script>{' '}
-        <script
-          // language='javascript'
-          type='text/javascript'
-          src='wolf_pack_abi.js'></script>
-      </Head>
+      
       <style global jsx>
         {`
           html,
