@@ -1,7 +1,7 @@
 import {ethers} from 'ethers';
 import Web3 from 'web3';
 import {useEffect, useState} from 'react';
-
+import Head from 'next/head';
 import {useRouter} from 'next/router';
 import Image from 'next/image';
 import Button from '../components/Button';
@@ -75,15 +75,15 @@ export default function _index() {
       '0x3302F0674f316584092C15B865b9e5C8f10751D2'
     );
     const price = 0.1 * 10 ** 18 * amount;
-    const gasAmount = await wolfContract.methods
-      .mint(amount)
-      .estimateGas({from: address, value: price});
+    // const gasAmount = await wolfContract.methods
+    //   .mint(amount)
+    //   .estimateGas({from: address, value: price});
 
     console.log({from: address, value: price});
 
     wolfContract.methods
       .mint(amount)
-      .send({from: address, value: price, gas: String(200254)})
+      .send({from: address, value: price})
       .on('transactionHash', function (hash: any) {
         console.log('transactionHash', hash);
       })
@@ -155,6 +155,20 @@ export default function _index() {
   }, [state.address]);
   return (
     <div className={`home h-100`}>
+      <Head>
+        <script
+          // language='javascript'
+          type='text/javascript'
+          src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script
+          // language='javascript'
+          type='text/javascript'
+          src='web3.min.js'></script>{' '}
+        <script
+          // language='javascript'
+          type='text/javascript'
+          src='wolf_pack_abi.js'></script>
+      </Head>
       <style global jsx>
         {`
           html,
