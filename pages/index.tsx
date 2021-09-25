@@ -92,7 +92,7 @@ export default function _index() {
 
     wolfContract.methods
       .mint(amount)
-      .send({from: address, value: price})
+      .send({from: address, value: price,gas:'314252'})
       .on('transactionHash', function (hash: any) {
         console.log('transactionHash', hash);
       })
@@ -400,7 +400,7 @@ export default function _index() {
       {/* ROADMAP */}
       <div
         className={`container mx-auto road-map-section  d-flex flex-column m-5`}>
-        <h2 className={`text-capitalize text-white text-center`}>Roadmap</h2>
+        <h2 className={`text-capitalize text-white text-center`}>$-10DEN coin V1 roadmap</h2>
         <div className={`d-flex flex-row position-relative`}>
           <div className={`d-flex flex-column col-lg-7`}>
             {roadmapJSON.map((item: any, index: number) => {
@@ -421,13 +421,14 @@ export default function _index() {
                       ' d-none d-sm-block'
                     }
                   />
-                  <p className={'m-0'}>
-                    <h5 className={index == 0 ? `main-fnt` : ''}>
-                      {item.percentage}
+                  <div className={'m-0 d-flex flex-column'}>
+                    <h5 className={`text-capitalize ${index == 0 ? `main-fnt` : ''}`}>
+                      {item.header}
                     </h5>
                     <br />
-                    {item.task}
-                  </p>
+                    <p>{item.task}</p>
+                    <p>{item.subTask}</p>
+                  </div>
                 </div>
               );
             })}
@@ -469,7 +470,7 @@ export default function _index() {
               src={`/img/001-commission.png`}
               className={`img-container h-100 w-100`}
             />
-            <p>2% Reflection to minters</p>
+            <p>2% Reflection to holders</p>
           </div>
           <div
             className={`col d-flex flex-column align-items-center justify-content-center m-2`}>
