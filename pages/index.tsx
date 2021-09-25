@@ -240,11 +240,11 @@ export default function _index() {
             color: #fff;
             background-color: #1f1f1f;
           }
-          .img-container {
+          .img-container text-capitalize {
             max-width: 300px;
             max-height: 300px;
           }
-          .howto-img-container {
+          .howto-img-container text-capitalize {
             max-width: 200px;
             max-height: 200px;
           }
@@ -460,7 +460,7 @@ export default function _index() {
             className={`col d-flex flex-column  align-items-center justify-content-center m-2`}>
             <img
               src={`/img/002-money.png`}
-              className={`img-container h-100 w-100`}
+              className={`img-container text-capitalize h-100 w-100`}
             />
             <p>3% Lifetime royalties to Minters</p>
           </div>
@@ -468,7 +468,7 @@ export default function _index() {
             className={`col d-flex flex-column align-items-center justify-content-center m-2`}>
             <img
               src={`/img/001-commission.png`}
-              className={`img-container h-100 w-100`}
+              className={`img-container text-capitalize h-100 w-100`}
             />
             <p>2% Reflection to holders</p>
           </div>
@@ -476,7 +476,7 @@ export default function _index() {
             className={`col d-flex flex-column align-items-center justify-content-center m-2`}>
             <img
               src={`/img/003-bullhorn.png`}
-              className={`img-container h-100 w-100`}
+              className={`img-container text-capitalize h-100 w-100`}
             />
             <p>2% Marketing</p>
           </div>
@@ -509,7 +509,7 @@ export default function _index() {
               className={`col d-flex flex-column justify-content-center  m-2 info-container h-100 w-100 text-center`}>
               <img
                 src={`/img/howto_1.png`}
-                className={`howto-img-container mx-auto h-100 w-100`}
+                className={`howto-img-container text-capitalize mx-auto h-100 w-100`}
               />
               <p>Connect your MetaMask</p>
             </div>
@@ -517,7 +517,7 @@ export default function _index() {
               className={`col d-flex flex-column justify-content-center  m-2 info-container h-100 w-100`}>
               <img
                 src={`/img/howto_2.png`}
-                className={`howto-img-container mx-auto h-100 w-100`}
+                className={`howto-img-container text-capitalize mx-auto h-100 w-100`}
               />
               <p>Click the Mint Button</p>
             </div>
@@ -525,7 +525,7 @@ export default function _index() {
               className={`col d-flex flex-column justify-content-center  m-2 info-container h-100 w-100`}>
               <img
                 src={`/img/howto_3.png`}
-                className={`howto-img-container mx-auto h-100 w-100`}
+                className={`howto-img-container text-capitalize mx-auto h-100 w-100`}
               />
               <p>
                 Approve 0.1 ETH + gas <br /> fee transaction
@@ -538,7 +538,7 @@ export default function _index() {
               className={`col d-flex flex-column justify-content-center  m-2 info-container h-100 w-100`}>
               <img
                 src={`/img/howto_4.png`}
-                className={`howto-img-container mx-auto h-100 w-100`}
+                className={`howto-img-container text-capitalize mx-auto h-100 w-100`}
               />
               <p>
                 Wait until reveal and then make your <br /> NFT your social
@@ -549,7 +549,7 @@ export default function _index() {
               className={`col d-flex flex-column justify-content-center  m-2 info-container h-100 w-100`}>
               <img
                 src={`/img/howto_5.png`}
-                className={`howto-img-container mx-auto h-100 w-100`}
+                className={`howto-img-container text-capitalize mx-auto h-100 w-100`}
               />
               <p>Hodl for moon mission</p>
             </div>
