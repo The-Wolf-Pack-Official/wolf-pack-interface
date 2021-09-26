@@ -85,12 +85,17 @@ export default function _index() {
     //   .mint(amount)
     //   .estimateGas(options);
 
-    options = {
-      ...options,
+    // options = {
+    //  ...options,
       // gas: String(1.2 * gasEstimate),
-    };
+    // };
     // console.log('estimated gas', String(1.2 * gasEstimate));
-
+    
+    
+    // var gasLimit = 200000;
+    // if
+    
+    
     wolfContract.methods
       .mint(amount)
       .send(options)
