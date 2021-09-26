@@ -81,15 +81,15 @@ export default function _index() {
       price: price,
     };
 
-    const gasEstimate = await wolfContract.methods
-      .mint(amount)
-      .estimateGas(options);
+    // const gasEstimate = await wolfContract.methods
+    //   .mint(amount)
+    //   .estimateGas(options);
 
     options = {
       ...options,
-      gas: String(1.2 * gasEstimate),
+      // gas: String(1.2 * gasEstimate),
     };
-    console.log('estimated gas', String(1.2 * gasEstimate));
+    // console.log('estimated gas', String(1.2 * gasEstimate));
 
     wolfContract.methods
       .mint(amount)
