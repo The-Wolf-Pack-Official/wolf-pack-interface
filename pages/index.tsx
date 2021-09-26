@@ -60,7 +60,7 @@ export default function _index() {
 
     wolfContract.methods
       .preMint(amount)
-      .send({from: address, value: price, 124254: String(gasAmount)})
+      .send({from: address, value: price, gas: String(gasAmount)})
       .on('transactionHash', function (hash: any) {
         console.log('transactionHash', hash);
       })
@@ -75,24 +75,25 @@ export default function _index() {
       '0x3302F0674f316584092C15B865b9e5C8f10751D2'
     );
     const price = 0.1 * 10 ** 18 * amount;
-    /*
-    let options = {
-      from: connectedAddress,
-      price: price;
-    }
-    const gasEstimate = await wolfContract.methods
-       .mint(amount)
-       .estimateGas(options);
-    options = {
-       ...options,
-       gas: parseInt(1.2 * gasEstimate)
-    }
-*/
     console.log({from: address, value: price});
+    let options: any = {
+      from: address,
+      price: price,
+    };
+
+    const gasEstimate = await wolfContract.methods
+      .mint(amount)
+      .estimateGas(options);
+
+    options = {
+      ...options,
+      gas: String(1.2 * gasEstimate),
+    };
+    console.log('estimated gas', String(1.2 * gasEstimate));
 
     wolfContract.methods
       .mint(amount)
-      .send({from: address, value: price,gas:'314252'})
+      .send(options)
       .on('transactionHash', function (hash: any) {
         console.log('transactionHash', hash);
       })
@@ -120,13 +121,13 @@ export default function _index() {
         ethereum.request({method: 'eth_requestAccounts'});
         try {
           _WolfPackWeb3 = new WolfPackWeb3();
-          console.log('_WolfPackWeb3: ', _WolfPackWeb3);
 
           let balance: any;
           let address: any = await _WolfPackWeb3.getAddress();
           if (address.length > 0) {
             balance = await _WolfPackWeb3.getBalance(address);
           }
+          console.log({address, balance});
           await setState({
             ...state,
             address: address,
@@ -164,7 +165,6 @@ export default function _index() {
   }, [state.address]);
   return (
     <div className={`home h-100`}>
-      
       <style global jsx>
         {`
           html,
@@ -400,7 +400,9 @@ export default function _index() {
       {/* ROADMAP */}
       <div
         className={`container mx-auto road-map-section  d-flex flex-column m-5`}>
-        <h2 className={`text-capitalize text-white text-center`}>$-10DEN coin V1 roadmap</h2>
+        <h2 className={`text-capitalize text-white text-center`}>
+          $-10DEN coin V1 roadmap
+        </h2>
         <div className={`d-flex flex-row position-relative`}>
           <div className={`d-flex flex-column col-lg-7`}>
             {roadmapJSON.map((item: any, index: number) => {
@@ -422,7 +424,10 @@ export default function _index() {
                     }
                   />
                   <div className={'m-0 d-flex flex-column'}>
-                    <h5 className={`text-capitalize ${index == 0 ? `main-fnt` : ''}`}>
+                    <h5
+                      className={`text-capitalize ${
+                        index == 0 ? `main-fnt` : ''
+                      }`}>
                       {item.header}
                     </h5>
                     <br />
