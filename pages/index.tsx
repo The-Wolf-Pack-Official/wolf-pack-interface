@@ -92,9 +92,18 @@ export default function _index() {
     // console.log('estimated gas', String(1.2 * gasEstimate));
     
     
-    // var gasLimit = 200000;
-    // if
-    
+    /*
+    var gasLimit = 200000;
+    if (amount == 1) {
+      gasLimit = 200000;
+    } else if (amount >= 5) {
+      gasLimit = 800000;
+    } else if (amount >= 10) {
+      gasLimit = 1400000;
+    } else if (amount >= 20) {
+      gaslimit = 2500000;
+    }
+    */
     
     wolfContract.methods
       .mint(amount)
