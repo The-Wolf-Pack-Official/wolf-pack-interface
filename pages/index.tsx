@@ -477,15 +477,17 @@ export default function _index() {
       {/* EARLY HOLDER */}
       <div
         className={`container mx-auto mt-4 royalties-section d-flex flex-column m-5 px-3 text-white `}>
-{/*
+
         <h2 className={`text-capitalize text-white text-center`}>
           Early Holders Get Fed
         </h2>
+{/*
         <p className={`text-center`}>
           7% tax on all sells after minting is completed
         </p>
-        <p className={`text-center`}>Breakdown:</p>
 */}
+        <p className={`text-center`}>Breakdown:</p>
+
         <div
           className={`d-flex flex-column flex-lg-row justify-content-between align-items-center text-center`}>
 {/*
@@ -504,7 +506,7 @@ export default function _index() {
               src={`/img/001-commission.png`}
               className={`img-container text-capitalize h-100 w-100`}
             />
-            <p>2% Reflection to holders</p>
+            <p>2% in reflections for every sell that happens on the secondary market goes back to all holders at the time of the sell</p>
           </div>
           <div
             className={`col d-flex flex-column align-items-center justify-content-center m-2`}>
@@ -512,7 +514,7 @@ export default function _index() {
               src={`/img/003-bullhorn.png`}
               className={`img-container text-capitalize h-100 w-100`}
             />
-            <p>2% Marketing</p>
+            <p>2% towards continuous marketing for the project to keep the momentum going and the floor rising</p>
           </div>
         </div>
       </div> 
