@@ -586,7 +586,7 @@ export default function _index() {
           </div>
         </div>
       </div>
-          -->
+-->
       {/* FOOTER */}
       <div
         className={`navbar d-flex flex-column flex-lg-row justify-content-between align-items-center p-3 text-white`}>
