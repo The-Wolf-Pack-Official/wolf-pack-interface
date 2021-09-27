@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const faqJSON = require('../src/data/faq.json');
 const roadmapJSON = require('../src/data/roadmap.json');
-const whiteListJSON = require('../src/data/whitelist.json');
+// const whiteListJSON = require('../src/data/whitelist.json');
 
 function truncateAddress(address: any) {
   try {
@@ -354,7 +354,7 @@ export default function _index() {
         </div>
       </div>
       {/* WELCOME SECTION */}
-      
+
       {/*
         <div
           className={`container d-flex flex-column justify-content-between
@@ -398,7 +398,7 @@ export default function _index() {
           <p>Minting Season's Over</p>
         </div>
       */}
-     
+
         
         
       <div
@@ -473,18 +473,21 @@ export default function _index() {
           </div>
         </div>
       </div>
+      
       {/* EARLY HOLDER */}
       <div
         className={`container mx-auto mt-4 royalties-section d-flex flex-column m-5 px-3 text-white `}>
+        <!--
         <h2 className={`text-capitalize text-white text-center`}>
           Early Holders Get Fed
         </h2>
         <p className={`text-center`}>
           7% tax on all sells after minting is completed
         </p>
-        <p className={`text-center`}>Breakdown:</p>
+        <p className={`text-center`}>Breakdown:</p> -->
         <div
           className={`d-flex flex-column flex-lg-row justify-content-between align-items-center text-center`}>
+          <!--
           <div
             className={`col d-flex flex-column  align-items-center justify-content-center m-2`}>
             <img
@@ -493,6 +496,7 @@ export default function _index() {
             />
             <p>3% Lifetime royalties to Minters</p>
           </div>
+-->
           <div
             className={`col d-flex flex-column align-items-center justify-content-center m-2`}>
             <img
@@ -510,7 +514,8 @@ export default function _index() {
             <p>2% Marketing</p>
           </div>
         </div>
-      </div>
+      </div> 
+      
       {/* FAQ */}
       <div
         id='faq'
@@ -524,8 +529,9 @@ export default function _index() {
           )
         )}
       </div>
-      {/* HOW TO MINT */}
-      <!--
+
+      <!-- {/* HOW TO MINT */} 
+      
       <div
         className={`container mx-auto mt-4 howto-minting-section d-flex flex-column m-5 px-3 text-white `}>
         <h2 className={`text-capitalize text-white text-center`}>
