@@ -45,6 +45,8 @@ export default function _index() {
   const [show, setShow] = useState(false);
   const [num_to_mint, setNumToMint] = useState<any>(0);
   const [error, setError] = useState<any>('');
+  
+  /*
   async function preRelase(address: string, amount: number) {
     var abi = require('../lib/abi.json');
     const wolfContract = new window.web3.eth.Contract(
@@ -68,6 +70,8 @@ export default function _index() {
         setError(error.message);
       });
   }
+  */
+  /*
   async function mint(address: string, amount: number) {
     var abi = require('../lib/abi.json');
     const wolfContract = new window.web3.eth.Contract(
@@ -114,7 +118,8 @@ export default function _index() {
       .catch(function (error: any) {
         setError(error.message);
       });
-  }
+  } 
+  */
   useEffect(() => {
     let {ethereum, web3}: any = window;
     if (ethereum) {
@@ -350,7 +355,11 @@ export default function _index() {
       </div>
       {/* WELCOME SECTION */}
       {
+        
         <div
+          
+          
+          <!--
           className={`container d-flex flex-column justify-content-between
             align-itens-center p-5 text-white`}>
           <h1>How many Wolves would you like to mint?</h1>
@@ -392,6 +401,9 @@ export default function _index() {
           <p>Minting Season's Over</p>
         </div>
       }
+      -->
+        
+        
       <div
         className={`container mx-auto welcome-section  d-flex flex-column m-5 px-3`}>
         <h2 className={`text-capitalize text-white text-center mt-4`}>
