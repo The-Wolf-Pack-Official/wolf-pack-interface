@@ -477,7 +477,7 @@ export default function _index() {
       {/* EARLY HOLDER */}
       <div
         className={`container mx-auto mt-4 royalties-section d-flex flex-column m-5 px-3 text-white `}>
-/*
+{/*
         <h2 className={`text-capitalize text-white text-center`}>
           Early Holders Get Fed
         </h2>
@@ -485,10 +485,10 @@ export default function _index() {
           7% tax on all sells after minting is completed
         </p>
         <p className={`text-center`}>Breakdown:</p>
-*/
+*/}
         <div
           className={`d-flex flex-column flex-lg-row justify-content-between align-items-center text-center`}>
-/*
+{/*
           <div
             className={`col d-flex flex-column  align-items-center justify-content-center m-2`}>
             <img
@@ -497,7 +497,7 @@ export default function _index() {
             />
             <p>3% Lifetime royalties to Minters</p>
           </div>
-*/
+*/}
           <div
             className={`col d-flex flex-column align-items-center justify-content-center m-2`}>
             <img
@@ -532,7 +532,7 @@ export default function _index() {
       </div>
 
       {/* HOW TO MINT */} 
-      {/*
+{/*
       <div
         className={`container mx-auto mt-4 howto-minting-section d-flex flex-column m-5 px-3 text-white `}>
         <h2 className={`text-capitalize text-white text-center`}>
