@@ -354,12 +354,9 @@ export default function _index() {
         </div>
       </div>
       {/* WELCOME SECTION */}
-      {
-        
+      
+      {/*
         <div
-          
-          
-          <!--
           className={`container d-flex flex-column justify-content-between
             align-itens-center p-5 text-white`}>
           <h1>How many Wolves would you like to mint?</h1>
@@ -400,8 +397,8 @@ export default function _index() {
           </Button> */}
           <p>Minting Season's Over</p>
         </div>
-      }
-      -->
+      */}
+     
         
         
       <div
