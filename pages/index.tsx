@@ -376,7 +376,7 @@ export default function _index() {
             </p>
             <p>{error}</p>
           </div>
-          <Button
+          {/* <Button
             buttonStyle={`mint-button-style text-uppercase mt-4 px-5`}
             onPress={async () => {
               _WolfPackWeb3 = new WolfPackWeb3();
@@ -388,7 +388,8 @@ export default function _index() {
               mint(state.address, num_to_mint);
             }}>
             Mint
-          </Button>
+          </Button> */}
+          <p>Minting Season's Over</p>
         </div>
       }
       <div
