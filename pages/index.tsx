@@ -394,7 +394,7 @@ export default function _index() {
               mint(state.address, num_to_mint);
             }}>
             Mint
-          </Button> */}
+          </Button> }
           <p>Minting Season's Over</p>
         </div>
       */}
