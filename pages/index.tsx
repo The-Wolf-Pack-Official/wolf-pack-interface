@@ -525,6 +525,7 @@ export default function _index() {
         )}
       </div>
       {/* HOW TO MINT */}
+      <!--
       <div
         className={`container mx-auto mt-4 howto-minting-section d-flex flex-column m-5 px-3 text-white `}>
         <h2 className={`text-capitalize text-white text-center`}>
@@ -585,6 +586,7 @@ export default function _index() {
           </div>
         </div>
       </div>
+          -->
       {/* FOOTER */}
       <div
         className={`navbar d-flex flex-column flex-lg-row justify-content-between align-items-center p-3 text-white`}>
